@@ -36,10 +36,8 @@ if __name__ == "__main__" :
     bot.run("Mzc3ODc4ODMzOTI5NjUwMTc2.DOTWmg.1Sip3uihH1F-OG5DfXpraAx7PxI") # Put bot token here
     
 class Xp:
-    
-    async def defaultrole(self, ctx):
+	async def defaultrole(self, ctx):
 		"""Lists the default role that new users are assigned."""
-
 		# Check if we're suppressing @here and @everyone mentions
 		if self.settings.getServerStat(ctx.message.guild, "SuppressMentions").lower() == "yes":
 			suppress = True
