@@ -33,7 +33,7 @@ async def on_ready():
     print("------")
     
 @client.event
-async def on_message:
+async def on_message(message):
     if message.content.startswith("-help"):
         await client.send_message(message.channel, "Use -lock to lock rooms so nobody can join and use -unlock to unlock rooms so your friends can join!")
 
