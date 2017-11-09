@@ -46,7 +46,7 @@ class Xp:
 		else:
 			suppress = False
 
-		role = self.settings.getServerStat(ctx.message.guild, "DefaultRole")
+		role = self.settings.getServerStat(ctx.message.guild, "Unassigned")
 		if role == None or role == "":
 			msg = 'New users are not assigned a role on joining this server.'
 			await ctx.channel.send(msg)
