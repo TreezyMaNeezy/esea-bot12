@@ -44,7 +44,7 @@ class Xp:
 		else:
 			suppress = False
 
-		role = self.settings.getServerStat(ctx.message.guild, "Unassigned")
+		role = self.settings.getServerStat(ctx.message.guild, "DefaultRole")
 		if role == None or role == "":
 			msg = 'New users are not assigned a role on joining this server.'
 			await ctx.channel.send(msg)
@@ -54,7 +54,7 @@ class Xp:
 			for arole in ctx.message.guild.roles:
 				if str(arole.id) == str(role):
 					found = True
-					msg = 'New users will be assigned to **{}**.'.format(arole.name)
+					msg = 'New users will be assigned to **{Unassigned}**.'.format(arole.name)
 					# Check for suppress
 					if suppress:
 						msg = Nullify.clean(msg)
