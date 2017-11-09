@@ -31,11 +31,6 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print("------")
-    
-@client.event
-async def on_message(message):
-    if message.content.startswith("-help"):
-        await client.send_message(message.channel, "Use -lock to lock rooms so nobody can join and use -unlock to unlock rooms so your friends can join!")
 
 if __name__ == "__main__" :
     bot.run("Mzc3ODc4ODMzOTI5NjUwMTc2.DOTWmg.1Sip3uihH1F-OG5DfXpraAx7PxI") # Put bot token here
