@@ -25,6 +25,12 @@ class Control:
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("-"))
 bot.add_cog(Control(bot))
 
+@client.event
+async def on_member_join(member):
+    serverchannel = member.server.default_channel
+    msg = "Welcome {0} to {1}".format(member.mention, member.server.name)
+    await client.send_message(serverchannel, msg)
+
 @bot.event
 async def on_ready():
     print("Logged in as")
